@@ -1,16 +1,31 @@
-# Chlorophyll projects
+# C5 projects
+
+5 things to do that all begin with C; all intended to address Wendi's "last ten yards" characterization: How do I find
+the data? How do I trust it? What do I do with it?
 
 
-Projects in need of attention... starting with chlorophyll concentration as registered by MODIS, the RCA and ARGO if possible.
-
-
-# chlorophyll
+## chlorophyll
 
 
 Ocean surface (MODIS) to sea floor (shallow / deep profilers) to other resources (ARGO)
 
 
-# Megaptera
+## coincidence
+
+
+A profiler (SCIP) at rest on a platform should be registering the same temperatures as the platform temperature sensor...
+
+
+
+## Canon: profiling profiler profiles
+
+
+What is the data canon? By which we mean: What are the expected ranges of the sensors as a function of 
+depth and season? What is the variance? Do VISIONS discrete datasets agree with this in the 'nearest time' sense?
+This project is essentially an expanded analysis of the patterns in the data. 
+
+
+## Cetus megapterii
 
 
 Getting whales from phones to phones
@@ -19,16 +34,8 @@ Getting whales from phones to phones
 # coup de ballon
 
 
-kicking tires on the new website
+kicking the tires of the interactive oceans website. One of the deliverables here is to 
+produce a data chart and then reproduce it precisely in a notebook.
 
 
-# coincidence
 
-
-whether two adjacent sensors agree with one another
-
-
-# P3: profiling profiler profiles
-
-
-What is the mean (with depth and season)? What is the variance? How do VISIONS discrete datasets agree? 
