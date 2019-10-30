@@ -31,7 +31,7 @@ This project is essentially an expanded analysis of the patterns in the data.
 Getting whales from phones to phones
 
 
-# coup de ballon
+## coup de ballon
 
 
 kicking the tires of the interactive oceans website. One of the deliverables here is to 
