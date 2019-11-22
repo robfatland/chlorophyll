@@ -1,0 +1,1 @@
+../data/chlorophyll/OregonSlopeBase/ShallowProfiler/deployment0006_RS01SBPS-SF01A-3A-FLORTD101-streamed-flort_d_data_record_20190601T000000.339009-20190614T051241.816166.nc

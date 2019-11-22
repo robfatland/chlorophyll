@@ -1,0 +1,1 @@
+../data/chlorophyll/OregonOffshore/ShallowProfiler/deployment0005_CE04OSPS-SF01B-3A-FLORTD104-streamed-flort_d_data_record_20190601T000001.076714-20190613T214921.769317.nc
