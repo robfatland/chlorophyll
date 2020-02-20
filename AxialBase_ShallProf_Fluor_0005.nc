@@ -1,1 +1,0 @@
-../data/chlorophyll/AxialBase/ShallowProfiler/deployment0005_RS03AXPS-SF03A-3A-FLORTD301-streamed-flort_d_data_record_20190616T144950.743058-20190914T235958.986413.nc
