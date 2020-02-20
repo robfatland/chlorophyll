@@ -32,7 +32,7 @@ array of what you can do on the AWS cloud
 4. choose AMIs from the left sidebar
 
 
-5. use the upper drop-down to change from Owned By Me to Private
+5. Ensure that the upper drop-down menu reads 'Owned By Me'
  
 
 You should now see an AMI called `jupyter1`. 
