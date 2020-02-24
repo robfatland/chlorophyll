@@ -1,3 +1,7 @@
+[Instructions](https://github.com/cloudbank-project/image-research-computing-tutorial/blob/master/README.md) for
+using a virtual machine *image* for research computing. 
+
+
 # C5 projects
 
 5 things to do that all begin with C; all intended to address Wendi's "last ten yards" characterization: How do I find
