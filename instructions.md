@@ -53,7 +53,7 @@ You should now see an AMI called `jupyter1`.
 10. choose Launch at the bottom right
 
 
-11. In the keypair dialog choose Create new keypair and name it <yourname>.pem. 
+11. In the keypair dialog choose Create new keypair and name it `yourname.pem`. 
 This will be the key to finding your instance in what follows.
 
 
@@ -79,7 +79,7 @@ and scan down until you find your keypair name. That row will be the row for you
 15. Hover in the left-most box of this row--the row for your instance--to bring up a little pencil in the "Name" column
 
 
-16. Click the pencil so you can enter the name of this instance. Call it <yourname>.
+16. Click the pencil so you can enter the name of this instance. Call it `yourname`.
 
 
 17. Wait for the instance state to change to running (a green dot in the Status column). 
@@ -87,7 +87,7 @@ and scan down until you find your keypair name. That row will be the row for you
 
 18. While you wait for your instance to finish starting up: Write down its ip address. 
 Find this address by scrolling a bit over to the right. Let's suppose for example that 
-your ip address is 12.23.34.45.
+your ip address is `12.23.34.45`.
 
  
 
@@ -96,7 +96,7 @@ will give you a token -- a long string of letters and numbers -- that you will u
 
  
 
-19.Open a bash shell and ensure the keypair file <yourname>.pem is present in your working directory.
+19.Open a bash shell and ensure the keypair file `yourname.pem` is present in your working directory.
 
 
 20. Issue this command in bash: `chmod 400 yourname.pem`
@@ -142,7 +142,8 @@ You will need this token the first time you start up your browser session in ste
 
  
 
-Remember that you must substitute the correct name of your .pem keypair file; and you must use the proper ip address, not 12.23.34.45. 
+Remember that you must substitute the correct name of your .pem keypair file; and you must use the 
+proper ip address, not `12.23.34.45`. 
 This command is commonly referred to as 'creating an ssh tunnel'. You are associating a location on your own computer 
 with the connection point on the EC2 instance via port numbers. Your machines port 7005 is actually a tunnel to the 
 EC2 instance port 8889.
