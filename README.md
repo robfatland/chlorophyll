@@ -33,6 +33,7 @@ crossing wires with that.
 Also note: The Miniconda installation modifies the User `.bashrc` file: Appending a block of code at the end of 
 the file which the comments explain is "managed by `conda init`".
 
+* Miniconda install advises: Close and reopen the terminal window
 * go [here](https://holoviz.org/installation.html) to finish the holoviz installation
 * go [here](https://holoviz.org/tutorial/index.html) for the tutorial
 * go [here](https://www.youtube.com/watch?v=7deGS4IPAQ0) for a live narrative run-through
