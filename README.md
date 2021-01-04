@@ -1,4 +1,4 @@
-# Chlorophyll
+# Chlorophyll notebook
 
 ## Contents
 
@@ -8,18 +8,17 @@
 * Section IV: Details on setting up Jupyter Lab
 * Section V: Prosaic context
 
-```
-I Holoviz
-```
-* start a VM such as a modest AWS EC2 with a 32GB root drive
+
+## I Setting up holoviz
+
+* start a VM, for example a modest AWS EC2 with a 32+ GB root drive (gives us some headroom)
     * include a local `bash` environment with a keypair (`.pem`) file; and log in
     * modify the prompt in `.basrhc` and edit `.bash_aliases` to include common commands
 * install miniconda
 * go [here](https://holoviz.org/tutorial/index.html) and follow along
 
-```
-II
-```
+
+## II Details on settign up holoviz
 
 ### Details on AWS EC2 start
 
@@ -33,19 +32,20 @@ II
 
 ### Details on `miniconda` and environments
 
-```
-III Setting up Jupyter Lab
-```
 
-```
-IV Details on Jupyter Lab
-```
+## III Setting up Jupyter Lab
 
-```
-V Context
-```
 
-## Introduction
+
+## IV Details on Jupyter Lab
+
+
+
+## V Context
+
+
+
+### Introduction
 
 
 This repository concerns using [Ocean Observatories Initiative (OOI)](https://oceanobservatories.org/) 
@@ -55,7 +55,7 @@ up a dedicated Jupyter Lab notebook server on the cloud; for example using
 [these instructions](https://github.com/cloudbank-project/image-research-computing-tutorial/blob/master/README.md).
 
 
-## This project
+### This project
 
 
 Coastal oceans are typically more productive, i.e. support more phytoplankton biomass per unit volume 
