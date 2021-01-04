@@ -23,17 +23,17 @@ Audience: Myself after six months away from this project.
 
 ## II Details on setting up holoviz
 
-### Details on AWS EC2 start
+### II.1 Details on AWS EC2 start
 
-#### Account and burn
+#### II.1.1 Account and burn
 
-#### Wizard details including root volume
+#### II.1.2 Wizard details including root volume
 
-#### elastic ip use
+#### II.1.3 elastic ip use
 
-### Details on `.bashrc` and `.bash_aliases`
+### II.2 Details on `.bashrc` and `.bash_aliases`
 
-### Details on `miniconda` and environments
+### II.3 Details on `miniconda` and environments
 
 
 ## III Setting up Jupyter Lab
