@@ -18,7 +18,7 @@
 * go [here](https://holoviz.org/tutorial/index.html) and follow along
 
 
-## II Details on settign up holoviz
+## II Details on setting up holoviz
 
 ### Details on AWS EC2 start
 
