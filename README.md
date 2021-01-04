@@ -18,20 +18,54 @@ Audience: Myself after six months away from this project.
     * include a local `bash` environment with a keypair (`.pem`) file; and log in
     * modify the prompt in `.basrhc` and edit `.bash_aliases` to include common commands
 * install miniconda
-* go [here](https://holoviz.org/tutorial/index.html) and follow along
+* go [here](https://holoviz.org/installation.html) to finish the installation
+* go [here](https://holoviz.org/tutorial/index.html) for the tutorial
+* go [here](https://www.youtube.com/watch?v=7deGS4IPAQ0) for a live narrative run-through
 
 
 ## II Details on setting up holoviz
 
 ### II.1 Details on AWS EC2 start
 
+I'm using a very light AWS EC2 instance: Instance type m5.large at ten cents per hour. By default this 
+comes with an 8GB root volume; which I increase to 32GB so as to not run out of disk space when working
+through the holoviz tutorial. 
+
+
 #### II.1.1 Account and burn
+
+* Getting an AWS account.
+* Calculating how long it would take to use $100.
+* What are the issues in connecting the account to real money?
+* What is CloudBank and how is it useful?
 
 #### II.1.2 Wizard details including root volume
 
+* First step of the wizard is to choose an image
+    * Many options
+    * Can save customized images and shift to different instance types
+* As noted above: Small EC2 instances come with 8GB root drives. Two options:
+    * Increase this size in the wizard
+    * Add additional volumes: Down side they must be mounted on the instance
+        * to do look up my notes on this and reference / copy
+
+        
 #### II.1.3 elastic ip use
 
+
+Cloud instances are assigned an ip address. Typically this can change when the machine 
+is stopped and then restarted. To not have to deal with this moving target AWS makes a
+number of *elastic ips* available. These can be assigned to the instance; and they persist.
+
+
 ### II.2 Details on `.bashrc` and `.bash_aliases`
+
+If like me you find color coded editor windows infuriating, why not customize vi (or *vim*)
+to just use one color. And perhaps also the text in the terminal window. And perhaps stop the bell from
+ringing (a Windows task associated with the bash shell; I'm using Ubuntu). And for common commands
+perhaps create simple aliases. All of this is intended to accelerate us towards focus on the 
+research. to do is describe how to actually do this stuff.
+
 
 ### II.3 Details on `miniconda` and environments
 
@@ -43,6 +77,9 @@ Audience: Myself after six months away from this project.
 ## IV Details on Jupyter Lab
 
 
+We want the Jupyter Lab hosted on the remote VM; and either a direct connection or an `ssh` tunnel.
+to do describe how to do this. 
+
 
 ## V Context
 
@@ -50,6 +87,11 @@ Audience: Myself after six months away from this project.
 
 ### Introduction
 
+We're interested in insight from *in situ* ocean sensors; covering physical, chemical and biological research.
+What is the value of the data? There is a lof of difficult tactical work involved in arriving at good answers.
+
+
+### Data
 
 This repository concerns using [Ocean Observatories Initiative (OOI)](https://oceanobservatories.org/) 
 data and data from other sources to examine chlorophyll
@@ -58,7 +100,7 @@ up a dedicated Jupyter Lab notebook server on the cloud; for example using
 [these instructions](https://github.com/cloudbank-project/image-research-computing-tutorial/blob/master/README.md).
 
 
-### This project
+### Productivity, sensors and research questions
 
 
 Coastal oceans are typically more productive, i.e. support more phytoplankton biomass per unit volume 
