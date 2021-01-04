@@ -1,5 +1,49 @@
 # Chlorophyll
 
+## Contents
+
+* Section I: Setting up holoviz
+* Section II: Details on setting up holoviz
+* Section III: Setting up Jupyter Lab
+* Section IV: Details on setting up Jupyter Lab
+* Section V: Prosaic context
+
+```
+I Holoviz
+```
+* start a VM such as a modest AWS EC2 with a 32GB root drive
+    * include a local `bash` environment with a keypair (`.pem`) file; and log in
+    * modify the prompt in `.basrhc` and edit `.bash_aliases` to include common commands
+* install miniconda
+* go [here](https://holoviz.org/tutorial/index.html) and follow along
+
+```
+II
+```
+
+### Details on AWS EC2 start
+
+#### Account and burn
+
+#### Wizard details including root volume
+
+#### elastic ip use
+
+### Details on `.bashrc` and `.bash_aliases`
+
+### Details on `miniconda` and environments
+
+```
+III Setting up Jupyter Lab
+```
+
+```
+IV Details on Jupyter Lab
+```
+
+```
+V Context
+```
 
 ## Introduction
 
