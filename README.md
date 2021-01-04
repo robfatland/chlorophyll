@@ -18,7 +18,22 @@ Audience: Myself after six months away from this project.
     * include a local `bash` environment with a keypair (`.pem`) file; and log in
     * modify the prompt in `.basrhc` and edit `.bash_aliases` to include common commands
 * install miniconda
-* go [here](https://holoviz.org/installation.html) to finish the installation
+    * search `install miniconda`, find the Linux version, copy the link
+    * go to the VM prompt and run `wget <that link>`
+    * per [this page](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html) run `bash <Miniconda_file.sh>`
+    
+
+During this installation: Agree to terms (or don't, see if I care) and allow the default install location.
+This does not require `sudo` as one operates here as a system User installing "one's own" code; which just 
+happens to be a package manager and a version of Python3. This in turn means taking some future care in paths 
+and environments so as to run as intended. Specifically: Python 3 is perhaps already included in the OS. 
+On the AWS EC2 from an Ubuntu image: `which python3` produces `usr/bin/python3`; and we do not want to be 
+crossing wires with that. 
+
+Also note: The Miniconda installation modifies the User `.bashrc` file: Appending a block of code at the end of 
+the file which the comments explain is "managed by `conda init`".
+
+* go [here](https://holoviz.org/installation.html) to finish the holoviz installation
 * go [here](https://holoviz.org/tutorial/index.html) for the tutorial
 * go [here](https://www.youtube.com/watch?v=7deGS4IPAQ0) for a live narrative run-through
 
