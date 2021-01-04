@@ -1,5 +1,8 @@
 # Chlorophyll notebook
 
+Audience: Myself after six months away from this project. 
+
+
 ## Contents
 
 * Section I: Setting up holoviz
