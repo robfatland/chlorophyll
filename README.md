@@ -1,6 +1,6 @@
 # Chlorophyll notebook
 
-Audience: Myself after six months away from this project. 
+Intended audience: A Python-savvy programmer needs a walk-through on photic zone datasets. Other intended audience: Myself after six months away from this project. 
 
 
 ## Contents
@@ -16,27 +16,30 @@ Audience: Myself after six months away from this project.
 
 * start a VM, for example a modest AWS EC2 with a 32+ GB root drive (gives us some headroom)
     * include a local `bash` environment with a keypair (`.pem`) file; and log in
-    * modify the prompt in `.basrhc` and edit `.bash_aliases` to include common commands
+    * modify the prompt in `.bashrc` and edit `.bash_aliases` to include common commands
 * install miniconda
     * search `install miniconda`, find the Linux version, copy the link
     * go to the VM prompt and run `wget <that link>`
     * per [this page](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html) run `bash <Miniconda_file.sh>`
-    
+        * During this installation: Agree to terms (or don't, see if I care) and allow the default install location.
+        * This does not require `sudo` as one operates here as a system User installing "one's own" code.
+        * That code just happens to be a package manager and a version of Python3. 
+        * This in turn means having some awareness of both paths and Python environments. 
+        * For example: Python 3 may already be included in the OS. 
+            * On an AWS EC2 with Ubuntu: `which python3` produces `usr/bin/python3`
+            * Always check that you are running the Python you intend.
 
-During this installation: Agree to terms (or don't, see if I care) and allow the default install location.
-This does not require `sudo` as one operates here as a system User installing "one's own" code; which just 
-happens to be a package manager and a version of Python3. This in turn means taking some future care in paths 
-and environments so as to run as intended. Specifically: Python 3 is perhaps already included in the OS. 
-On the AWS EC2 from an Ubuntu image: `which python3` produces `usr/bin/python3`; and we do not want to be 
-crossing wires with that. 
-
-Also note: The Miniconda installation modifies the User `.bashrc` file: Appending a block of code at the end of 
-the file which the comments explain is "managed by `conda init`".
-
-* Miniconda install advises: Close and reopen the terminal window.
-* go [here](https://holoviz.org/installation.html) to finish the holoviz installation
-    * Note this uses Python 3.7 whereas we just installed Miniconda with Python 3.8... how to proceed?
-    * I tried 3.7 but this runs into a nasty fail...
+         * The Miniconda installation modifies the User `.bashrc` file
+             * A block of code is appending a block of code
+             * The comments explain that this is "managed by `conda init`"...
+             * ...so don't touch it.
+      * Miniconda install advises: Close and reopen the terminal window.
+* Now back to holoviz: 
+    * Go [here](https://holoviz.org/installation.html) with the idea of completing the holoviz installation
+        * Note this uses Python 3.7 whereas we just installed Miniconda with Python 3.8...
+        * But this is detected and some package manager magic happens.
+        * However I ran into a serious issue (circa January 2021)
+            * This works fine: 
     
  ```
  ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::rise-5.6.1-py37_1'.
