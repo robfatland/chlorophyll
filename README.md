@@ -35,11 +35,25 @@ Intended audience: A Python-savvy programmer needs a walk-through on photic zone
              * ...so don't touch it.
       * Miniconda install advises: Close and reopen the terminal window.
 * Now back to holoviz: 
+    * To reiterate: I am working on an AWS c5.large EC2 instance running Ubuntu.
     * Go [here](https://holoviz.org/installation.html) with the idea of completing the holoviz installation
         * Note this uses Python 3.7 whereas we just installed Miniconda with Python 3.8...
         * But this is detected and some package manager magic happens.
         * However I ran into a serious issue (circa January 2021)
-            * This works fine: 
+            * This works fine: `conda update conda` (twice)
+            * This works fine: `conda create -n holoviz-tutorial python=3.7`
+            * This works fine: `conda activate holoviz-tutorial`
+                * I have a prompt indicating I am in an activated Python environment, check.
+            * This fails: `conda install -c pyviz holoviz`
+                * `ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::rise-5.6.1-py37_1'.`
+                * Please observe that `-c pyviz` references the *pyviz* **channel**. 
+                * Below the three installs use channel = *conda-forge* instead.
+                * What to do? Go on [the holoviz discourse site](https://holoviz.discourse.org) and create a topic: "Help!"
+            * This worked: `conda install -c conda-forge datashader`
+            * This worked: `conda install -c conda-forge hvplot`
+            * This worked (after a time): `conda install -c conda-forge geoviews`
+            * At this point **holoviz** is not installed. It is also not found on the `conda-forge` channel. 
+            * Trying `conda install -c pyviz holoviz` is the next try; but this finds inconsistencies...
     
  ```
  ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::rise-5.6.1-py37_1'.
