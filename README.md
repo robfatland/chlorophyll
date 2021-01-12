@@ -73,17 +73,7 @@ dependencies:
   - xarray
   - fsspec
 ```
-    
- ```
- ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::rise-5.6.1-py37_1'.
- etcetera 30 lines of diagnostics
- ```
- 
- See this is what I'm on about. I did some cut-paste of the error message and found something along the lines of
- Python has to match what is expected so install python 3.7: `conda install python=3.7`. Ok I did this; and what
- happens now? Same thing with `(700)`. So I posted it on Discourse for holoviz.
- 
- 
+
 * go [here](https://holoviz.org/tutorial/index.html) for the tutorial
 * go [here](https://www.youtube.com/watch?v=7deGS4IPAQ0) for a live narrative run-through
 
