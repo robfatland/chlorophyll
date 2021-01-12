@@ -53,7 +53,26 @@ Intended audience: A Python-savvy programmer needs a walk-through on photic zone
             * This worked: `conda install -c conda-forge hvplot`
             * This worked (after a time): `conda install -c conda-forge geoviews`
             * At this point **holoviz** is not installed. It is also not found on the `conda-forge` channel. 
-            * Trying `conda install -c pyviz holoviz` is the next try; but this finds inconsistencies...
+            * Trying `conda install -c pyviz holoviz` is the next try; but this finds conflicts
+    * Make sure to return to the base environment using `conda deactivate` and proceed:
+        * create a holoviz-env.yml file with the content as given below
+        * execute `conda env -f create holoviz-env.yml`
+        * this builds a coordinated environment with all of those packages installed (my trial featured no drama)
+        
+```
+name: holoviz
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - datashader
+  - geoviews
+  - hvplot
+  - ipykernel
+  - pandas
+  - xarray
+  - fsspec
+```
     
  ```
  ERROR conda.core.link:_execute(698): An error occurred while installing package 'defaults::rise-5.6.1-py37_1'.
