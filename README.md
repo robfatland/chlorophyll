@@ -56,7 +56,7 @@ Intended audience: A Python-savvy programmer needs a walk-through on photic zone
             * Trying `conda install -c pyviz holoviz` is the next try; but this finds conflicts
     * Make sure to return to the base environment using `conda deactivate` and proceed:
         * create a holoviz_env.yml file with the content as given below
-        * execute `conda env -f create holoviz_env.yml`
+        * execute `conda env create -f holoviz_env.yml`
         * this builds a coordinated environment with all of those packages installed (my trial featured no drama)
         
 ```
