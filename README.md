@@ -33,7 +33,6 @@ mode; and I alias this command to `jbook`. I also modify my terminal window and 
         * For example: Python 3 may already be included in the OS. 
             * On an AWS EC2 with Ubuntu: `which python3` produces `usr/bin/python3`
             * Always check that you are running the Python you intend.
-
          * The Miniconda installation modifies the User `.bashrc` file
              * A block of code is appending a block of code
              * The comments explain that this is "managed by `conda init`"...
@@ -45,7 +44,23 @@ mode; and I alias this command to `jbook`. I also modify my terminal window and 
              * `export PATH="/home/lparsons/miniconda3/bin:$PATH"`
              * Save the file and run `source .bashrc`
              * See if it worked: Type `conda`
-      * Miniconda install advises: Close and reopen the terminal window.
+         * Miniconda install advises: Close and reopen the terminal window
+         * Enironments: Create an environment just to get the hang of it
+              * Run this: `conda create --name myenvironment python=3.8`
+              * Ensure it is listed: `conda env list`
+              * See it in its registry location: `ls ~/miniconda3/envs`
+              * Activate it: `conda activate myenvironment`
+                  * I was informed that I need to run `conda init bash` for this to work
+                  * After I ran it I was also told to close and re-open the shell
+                  * So I did that... and thereupon `conda activate myenvironment` worked properly
+              * Notice the prompt has changed: `(myenvironment) usualprompt>`
+                  * This is a handy way to discern whether or not I am in the environment
+              * Below we start building out environments from configuration `.yml` files
+              * For now let's deactivate and remove this environment
+                  * `conda deactivate`
+                  * `conda env remove --name myenvironment`
+                  * `ls ~/miniconda3/envs` to check that the environment is no longer listed
+              
 * Now back to holoviz: 
     * To reiterate: I am working on an AWS c5.large EC2 instance running Ubuntu.
     * Go [here](https://holoviz.org/installation.html) with the idea of completing the holoviz installation
