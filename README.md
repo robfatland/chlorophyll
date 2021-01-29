@@ -14,6 +14,11 @@ Intended audience: A Python-savvy programmer needs a walk-through on photic zone
 
 ## I Setting up holoviz
 
+Starting with a bare Linux OS, pre-Python install. Some of these actions are "my preference".
+For example I use `ssh` tunnels a lot so I have to start *jupyter notebooks* in no-screen
+mode; and I alias this command to `jbook`. I also modify my terminal window and `vim` editor.
+
+
 * start a VM, for example a modest AWS EC2 with a 32+ GB root drive (gives us some headroom)
     * include a local `bash` environment with a keypair (`.pem`) file; and log in
     * modify the prompt in `.bashrc` and edit `.bash_aliases` to include common commands
@@ -33,6 +38,13 @@ Intended audience: A Python-savvy programmer needs a walk-through on photic zone
              * A block of code is appending a block of code
              * The comments explain that this is "managed by `conda init`"...
              * ...so don't touch it.
+         * `conda: command not found`
+             * Sometimes the above auto-modification to `.bashrc` does not work. For example on my PC. 
+             * First cd to your home directory and make sure the `miniconda3` directory is present
+             * We need to add to the `$PATH` variable. Put this line at the end of `~/.bashrc`
+             * `export PATH="/home/lparsons/miniconda3/bin:$PATH"`
+             * Save the file and run `source .bashrc`
+             * See if it worked: Type `conda`
       * Miniconda install advises: Close and reopen the terminal window.
 * Now back to holoviz: 
     * To reiterate: I am working on an AWS c5.large EC2 instance running Ubuntu.
