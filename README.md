@@ -85,20 +85,107 @@ mode; and I alias this command to `jbook`. I also modify my terminal window and 
         * create a holoviz_env.yml file with the content as given below
         * execute `conda env create -f holoviz_env.yml`
         * this builds a coordinated environment with all of those packages installed (my trial featured no drama)
-        
+
+What you need to know: The working environment for this research is complicated by needing a bunch of packages
+(although it feels like installing a kitchen to get a spoon); so we go around on how to set up the environment.
+This sits in a named subdirectory of anaconda3 or miniconda3, is activated using `activate` (once it works) and
+is the context for starting the Jupyter notebook server or Jupyter lab server. 
+
+
+Dhruv has the following `yaml` file (`environment.yaml`) working. This is more comprehensive than the prior `sogos.yml` 
+given below that; which runs for me on an EC2 VM. What is the delta from `sogos` to `glider-env`?  Answer:
+`pytorch` is the necessary change. 
+
+`pytorch` installs fairly quickly in my `base` environment but gives `sogos` environment fits at the moment.
+
+
+Notice in both cases 
+we have a GitHub finesse of GliderTools where finally the `spice` PR is incorporated. 
+
 ```
-name: holoviz
+name: glider-env
 channels:
   - conda-forge
-  - defaults
 dependencies:
+  - python=3.7
+  - pip
+  - ipykernel
+  - geopandas
+  - gsw
+  - fsspec
+  - xarray
+  - geoviews
+  - hvplot
+  - holoviews
+  - datashader
+  - fastparquet
+  - dask
+  - cartopy
+  - scipy
+  - numba
+  - netcdf4=1.5.4
+  - matplotlib
+  - panel
+  - jupyterlab=2
+  - jupyter-panel-proxy
+  - hdf5
+  - pyproj
+  - gpytorch
+  - pykrige
+  - basemap
+  - numexpr
+  - pip:
+    - ray
+    - git+git://github.com/dhruvbalwada/GliderTools.git@add_spice
+```
+
+
+
+This is what successfully builds the `sogos` environment (`sogos.yml`):
+
+
+```
+name: sogos
+channels:
+  - conda-forge
+dependencies:
+  - python
   - datashader
   - geoviews
   - hvplot
-  - ipykernel
-  - pandas
-  - xarray
+  - gsw
   - fsspec
+  - numexpr
+  - pytest
+  - jupyter
+  - jupyterlab=2
+  - xarray
+  - numpy
+  - scipy
+  - dask
+  - netcdf4
+  - pandas
+  - matplotlib
+  - pykrige
+  - pip=20
+  - h5py
+  - cartopy
+  - cmocean
+  - xrft
+# robs glider.yml uses:
+#  - jupyter-panel-proxy
+#  - netcdf4=1.5.4
+#    - git+git://github.com/dhruvbalwada/GliderTools.git@add_spice
+  - pip:
+    - git+git://github.com/GliderToolsCommunity/GliderTools.git
+    - requests
+    - ecmwf-api-client
+    - geo_tools
+    - progressbar
+    - geographiclib
+    - pyshp
+    - wget
+    - nc-time-axis
 ```
 
 * go [here](https://holoviz.org/tutorial/index.html) for the tutorial
